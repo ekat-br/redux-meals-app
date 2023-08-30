@@ -1,4 +1,6 @@
+import MealsCard from "./MealsCard";
 import { useGetAllMealsQuery } from "./mealsApi"
+import { styled } from "styled-components";
 
 export default function MealsList () {
     const {data, isError, isLoading} = useGetAllMealsQuery(); 
@@ -12,19 +14,28 @@ export default function MealsList () {
     }
 
     return (
-        <>
+        <Container>
             <div>Meals App</div>
-            <ul>
+            <MealsUList>
               {data.meals.map((meal) => 
-                <li key={meal.idMeal}>
-                    <div>{meal.strMeal}</div>
-                    <img src={meal.strMealThumb} alt={meal.strMeal}></img>
-                </li>
+               <MealsCard key={meal.idMeal} meal={meal}/>
               
               )}
-            </ul>
+            </MealsUList>
            
-        </>
+        </Container>
         
     )
 }
+
+const Container = styled.h1`
+text-align: center; 
+font-size: 1.5rem; 
+margin-top: 20px; 
+color: #DB5375;
+`
+const MealsUList = styled.ul`
+padding: 10px 40px 10px 40px;
+
+
+`
