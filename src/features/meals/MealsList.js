@@ -22,7 +22,7 @@ export default function MealsList () {
 
     return (
         <Container>
-            <div>Meals App</div>
+            <div>Meals List</div>
             <MealsUList>
               {data.meals.slice(0, visibleMeals).map((meal) => 
                <MealsCard key={meal.idMeal} meal={meal}/>

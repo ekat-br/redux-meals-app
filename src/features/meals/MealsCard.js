@@ -1,5 +1,6 @@
 
 import { styled } from "styled-components"
+import FavoriteButton from "../favorites/FavoriteButton"
 export default function MealsCard ({meal}) {
 
 
@@ -7,6 +8,7 @@ export default function MealsCard ({meal}) {
         <CardContainer>
             <div>{meal.strMeal}</div>
             <img src={meal.strMealThumb} alt={meal.strMeal}></img>
+            <FavoriteButton mealId={meal.idMeal}></FavoriteButton>
         </CardContainer>
 
     )
@@ -21,5 +23,4 @@ margin: 20px auto 20px auto;
 background-color: #AEC3B0; 
 max-width: 800px;
 height: auto; 
-
 `
