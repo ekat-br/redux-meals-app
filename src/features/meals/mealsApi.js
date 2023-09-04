@@ -1,17 +1,13 @@
-// Need to use the React-specific entry point to allow generating React hooks
-import { createApi } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-// Define a service using a base URL and expected endpoints
 export const mealsApi = createApi({
   reducerPath: 'mealsApi',
-  baseQuery: () => ({data: require("../../data/meals.json")}),
+  baseQuery:  fetchBaseQuery({ baseUrl: '/' }),
   endpoints: (builder) => ({
     getAllMeals: builder.query({
-      query: () => "",
+      query: () => "/data/meals.json",
     }),
   }),
 })
 
-// Export hooks for usage in function components, which are
-// auto-generated based on the defined endpoints
 export const { useGetAllMealsQuery } = mealsApi; 
