@@ -1,6 +1,7 @@
 
 import { styled } from "styled-components"
 import FavoriteButton from "../favorites/FavoriteButton"
+import Toppings from "../toppings/Toppings"
 export default function MealsCard ({meal}) {
 
 
@@ -8,6 +9,8 @@ export default function MealsCard ({meal}) {
         <CardContainer>
             <div>{meal.strMeal}</div>
             <Image src={meal.strMealThumb} alt={meal.strMeal}></Image>
+            <span>Select Extra Toppings: </span>
+            <Toppings mealId={meal.idMeal}/>
             <FavoriteButton mealId={meal.idMeal}></FavoriteButton>
         </CardContainer>
 
