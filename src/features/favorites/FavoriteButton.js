@@ -18,7 +18,7 @@ background-color: pink;
 border-radius: 20%;
 font-size: 24px; 
 display: block; 
-margin: 10px 385px 20px; 
+margin: 10px auto; 
 &:hover{
     background-color: #ff7096; 
 }

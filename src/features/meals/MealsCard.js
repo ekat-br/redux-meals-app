@@ -7,7 +7,7 @@ export default function MealsCard ({meal}) {
     return (
         <CardContainer>
             <div>{meal.strMeal}</div>
-            <img src={meal.strMealThumb} alt={meal.strMeal}></img>
+            <Image src={meal.strMealThumb} alt={meal.strMeal}></Image>
             <FavoriteButton mealId={meal.idMeal}></FavoriteButton>
         </CardContainer>
 
@@ -21,6 +21,12 @@ border: 2px solid pink;
 border-radius: 7px; 
 margin: 20px auto 20px auto; 
 background-color: #AEC3B0; 
-max-width: 800px;
-height: auto; 
+max-width: 500px; 
+height: auto;
+padding: 10px; 
+`
+const Image = styled.img`
+width: 100%;
+height: auto;
+border-radius: 4px;
 `

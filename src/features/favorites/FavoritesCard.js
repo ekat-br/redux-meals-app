@@ -11,7 +11,8 @@ const FavoritesCard = ({ meal }) => {
 
 export default FavoritesCard;
 
-const CardContainer = styled.div``;
+const CardContainer = styled.div`
+`;
 
 const MealName = styled.span`
   font-size: 1.2rem;
